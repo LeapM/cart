@@ -1,5 +1,6 @@
 import http from 'http';
 import assert from 'assert';
+import "regenerator-runtime/runtime"
 
 import '../src/app.js';
 
