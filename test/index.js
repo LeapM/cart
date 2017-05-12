@@ -1,3 +1,3 @@
 import "regenerator-runtime/runtime"
 import dotenv from 'dotenv'
-dotenv('.env.debug');
+dotenv.config({path:'.env.test'});

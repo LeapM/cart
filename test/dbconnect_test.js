@@ -4,7 +4,7 @@ import { getDB } from '../src/dal';
 describe('DB Connection', () => {
 	it('should return db', (done) => {
 		getDB().then((db) => {
-			done(assert.equal(db, null));
+			done(assert(db.databaseName==='carttest'));
 		}).catch((err) => {
 			done(err);
 		})
