@@ -7,7 +7,6 @@ class Category {
 		this.parentId;
 		this.ancestor = [];
 	}
-
 	static async gen(viewer, id) {
 		//db.categories.find({_id: {$in: product['category_ids']}})
 	}

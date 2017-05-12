@@ -66,11 +66,16 @@ class Product{
   get picture(){
 
   }
-  async static gen(viewer,id){
-    //db.products.find({id:id})
-    //product = db.products.findOne({"slug": "wheelbarrow-9092"})
+  static async gen(viewer,id){
+    const data = await getProductById(id);
+    const canSee = checkCanSee(viwer,data);
+    return canSee?new Product(data):null;
+
   }
-  async static genByCategory(viewer,categoryId){
+  static async genByCategory(viewer,categoryId){
     //db.products.find({category_ids: ObjectId('6a5b1476238d3b4dd5000048')})
+  }
+  static async checkCanSee(viewer,data){
+    return true;
   }
 }
